@@ -1,16 +1,19 @@
 import styled from 'styled-components'
 
-export const Cart = styled.section`
-    padding-top: 5rem;
+export const Cart = styled.main`
+    form{
+        padding-top: 5rem;
     
-    display: flex;
-    justify-content: space-between;
-   
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        
 
-    h1{
-        font-size: 20px;
-        font-family: "Baloo 2", cursive;
-        color: ${props=>props.theme['gray-800']};
+        h1{
+            font-size: 20px;
+            font-family: "Baloo 2", cursive;
+            color: ${props=>props.theme['gray-800']};
+        }
     }
 `
 
@@ -168,7 +171,7 @@ export const SelectedCoffees = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-
+    
     .selectedCoffees-container{
         background-color: ${props=>props.theme['white']};
         display: flex;
@@ -177,67 +180,7 @@ export const SelectedCoffees = styled.div`
         border-radius: .2rem;
         padding: 2rem;
     }
-
-    .coffeeImage{
-        width: 4.25rem;
-        height: 4.25rem;
-    }
-
-    .coffeeImage > img{
-        width: 100%;
-    }
-
-    .coffeeCart{
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid ${props=>props.theme['gray-200']};
-    }
-
-    .coffeeBody{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: .6rem;
-    }
-
-    .coffeeBody > span{
-        color: ${props=>props.theme['gray-800']};
-    }
-
-    .coffeeActions{
-        display: flex;
-        
-        align-items: center;
-        justify-content: center;
-        gap: .6rem;
-    }
-
-    .removeCoffee > button{
-        border: none;
-        border-radius: .3rem;
-        padding: 5px;
-        font-size: .8rem;
-        color: ${props=>props.theme['gray-800']};
-    }
-
-    .removeCoffee > button > span:first-child{
-        color: ${props=>props.theme['purple-300']};
-    }
-    
-
-    .coffee-price{
-        display: flex;
-        height: 100%;
-        font-size: 1.2rem;
-        font-family: "Baloo 2", cursive;
-        
-        color: ${props=>props.theme['gray-800']};
-       
-    }
-    
+  
 `
 
 export const ResumeOrder = styled.div`
@@ -246,6 +189,8 @@ export const ResumeOrder = styled.div`
     gap: 2rem;
 
     .resume-container{
+        max-width: 20rem;
+        width: 20rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -263,10 +208,23 @@ export const ResumeOrder = styled.div`
         font-weight: 700;
         background-color: ${props=>props.theme['yellow-200']};
         transition: .2s ease-in-out;
+
+        &:disabled{
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
     }
 
     .confirmeOrder-btn:hover{
         background-color: ${props=>props.theme['yellow-400']};
+    }
+
+    .total-geral{
+        span{
+            font-size: 1.5rem;
+            color:${props=>props.theme['gray-800']};
+            font-family: "Baloo 2", cursive;
+        }
     }
 
 `

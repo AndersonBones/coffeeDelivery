@@ -16,11 +16,11 @@ export const Coffee = ({item}:PropsCoffee) =>{
 
     const [amount, setAmount] = useState(1);
 
-    const handleIncrement = () =>{
+    const handleIncrease = () =>{
         setAmount(amount+1)
     }
 
-    const handleDecrement = () =>{
+    const handleDecrease = () =>{
         setAmount(amount-1)
 
         if(amount <= 1){
@@ -29,7 +29,13 @@ export const Coffee = ({item}:PropsCoffee) =>{
     }
 
     const handleAddCoffee = () =>{
-        setAddCoffees(item, amount)
+        setAddCoffees({
+            id:item.id,
+            image:item.image,
+            name:item.name,
+            amount,
+            price:item.price
+        })
     }
 
     return (
@@ -52,12 +58,12 @@ export const Coffee = ({item}:PropsCoffee) =>{
             </div>
 
             <div className="coffee-footer">
-                <p className="m-0">R$<span>{item.price}</span></p>
+                <p className="m-0">R$<span>{String(item.price.toFixed(2)).replace('.',',')}</span></p>
 
                 <CoffeeSetAmount>
-                    <button onClick={handleDecrement}><Minus></Minus></button>
+                    <button onClick={handleDecrease}><Minus></Minus></button>
                     <span>{amount}</span>   
-                    <button onClick={handleIncrement}><Plus></Plus></button>
+                    <button onClick={handleIncrease}><Plus></Plus></button>
                 </CoffeeSetAmount>
                 
                 <button onClick={handleAddCoffee} className="set-amount--cart-button">

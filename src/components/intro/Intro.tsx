@@ -1,4 +1,4 @@
-import { IntroContainer, IntroImage, IntroTitle, IntroItems} from "./styles"
+import { IntroContainer, IntroTitle, IntroItems, ListItem, IntroImage} from "./styles"
 import { ShoppingCart, Timer, Package, Coffee } from "phosphor-react"
 import coffee from '../../assets/coffee.svg'
 
@@ -13,30 +13,30 @@ export const Intro = ()=>{
 
                 <IntroItems>
                     <ul>
-                        <li>
-                            <span id="item1"><ShoppingCart size={20} weight="fill"></ShoppingCart></span>
+                        <ListItem>
+                            <span className="item1"><ShoppingCart size={20} weight="fill"></ShoppingCart></span>
                             
                             <span>Compra simples e segura</span>
-                        </li>
-                        <li>
-                            <span id="item2"><Timer size={20} weight="fill"></Timer></span>
+                        </ListItem>
+                        <ListItem>
+                            <span className="item2"><Timer size={20} weight="fill"></Timer></span>
                             
                             <span>Entrega rápida e rastreada</span>
-                        </li>
+                        </ListItem>
                     </ul>
 
                     <ul>
-                        <li>
-                            <span id="item3"><Package size={20} weight="fill"></Package></span>
+                        <ListItem>
+                            <span className="item3"><Package size={20} weight="fill"></Package></span>
                             
                             <span>Embalagem mantem café intacto</span>
-                        </li>
+                        </ListItem>
                         
-                        <li>
-                            <span id="item4"><Coffee size={20} weight="fill"></Coffee></span>
+                        <ListItem>
+                            <span className="item4"><Coffee size={20} weight="fill"></Coffee></span>
                             
                             <span> O café chega fresquinho até você</span>
-                        </li>
+                        </ListItem>
                     </ul>
                     
                 </IntroItems>

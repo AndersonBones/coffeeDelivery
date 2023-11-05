@@ -20,7 +20,8 @@ export interface ICoffee {
   price: number
   tags: string[]
   image: string
-  isAvaliable?: boolean
+  isAvaliable?: boolean,
+  amount:number
 }
 
 export const coffees: ICoffee[] = [
@@ -32,6 +33,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional'],
     image: TradicionalExpressImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional'],
     image: AmericanExpressImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 3,
@@ -50,6 +53,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional'],
     image: CreamyExpressImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 4,
@@ -59,6 +63,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional', 'gelado'],
     image: IceExpressImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 5,
@@ -68,6 +73,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional', 'com leite'],
     image: CoffeeWithMilkImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 6,
@@ -78,6 +84,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional', 'com leite'],
     image: LatteImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 7,
@@ -88,6 +95,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional', 'com leite'],
     image: CapuccinoImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 8,
@@ -98,6 +106,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional', 'com leite'],
     image: MacchiatoImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 9,
@@ -107,6 +116,7 @@ export const coffees: ICoffee[] = [
     tags: ['tradicional', 'com leite'],
     image: MocaccinoImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 10,
@@ -116,6 +126,7 @@ export const coffees: ICoffee[] = [
     tags: ['especial', 'com leite'],
     image: HotCoffeeImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 11,
@@ -126,6 +137,7 @@ export const coffees: ICoffee[] = [
     tags: ['especial', 'alcoólico', 'gelado'],
     image: CubanCoffeeImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 12,
@@ -135,6 +147,7 @@ export const coffees: ICoffee[] = [
     tags: ['especial'],
     image: HawaiianCoffeeImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 13,
@@ -144,6 +157,7 @@ export const coffees: ICoffee[] = [
     tags: ['especial'],
     image: ArabianCoffeeImage,
     isAvaliable: true,
+    amount:1
   },
   {
     id: 14,
@@ -153,5 +167,6 @@ export const coffees: ICoffee[] = [
     tags: ['especial', 'alcoólico'],
     image: IrishCoffeeImage,
     isAvaliable: true,
+    amount:1
   },
 ]

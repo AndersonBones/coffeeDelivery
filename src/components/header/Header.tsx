@@ -29,7 +29,7 @@ export const Header = () => {
                         <MapPin size={22} weight="fill"></MapPin> Lucas do Rio Verde
                     </Location>
 
-                    <CartButton onClick={()=>{navigate('/order')}} >
+                    <CartButton onClick={()=>{navigate('/checkout')}} >
                         {coffeesList.length >= 1 && (<span>{coffeesList.length}</span>)}
                         
                         <ShoppingCart size={22} weight="fill"></ShoppingCart>

@@ -77,6 +77,7 @@ export const CoffeeItem = styled.div`
 `
 
 export const CoffeeSetAmount = styled.div`
+    display: flex;
     padding: 5px;
     border-radius: .3rem;
     background-color: ${props=>props.theme['gray-200']};

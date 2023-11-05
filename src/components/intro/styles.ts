@@ -58,15 +58,17 @@ export const IntroItems = styled.div`
         flex-direction: column;
         gap: 1rem;
     }
-    ul > li{
-        display: flex;
-        align-items: center;
-        font-size: 1.1rem;
-        list-style: none; 
-        gap: .8rem;
-    }
 
-    ul > li> span:first-child{
+`
+
+export const ListItem = styled.li`
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    list-style: none; 
+    gap: .8rem;
+
+    span:first-child{
         
         display: inline-flex;
         align-items: center;
@@ -77,20 +79,19 @@ export const IntroItems = styled.div`
         color: ${props=>props.theme['white']};
     }
 
-    #item1{
+    .item1{
         background-color: ${props=>props.theme['yellow-400']};
     }
 
-    #item2{
+    .item2{
         background-color: ${props=>props.theme['yellow-200']};
     }
 
-    #item3{
+    .item3{
         background-color: ${props=>props.theme['gray-800']};
     }
 
-    #item4{
+    .item4{
         background-color: ${props=>props.theme['purple-300']};
     }
-
 `
