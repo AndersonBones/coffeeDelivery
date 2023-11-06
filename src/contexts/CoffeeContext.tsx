@@ -4,6 +4,7 @@ interface CoffeeContextProps{
     children:ReactNode
 }
 
+
 export interface IselectedCoffees{
     id:number,
     image:string,
@@ -21,6 +22,7 @@ interface ItotalPrice{
 interface InfoCheckout{
     road:string
     city:string
+    num:string
     paymentMethod:string
 } 
 
@@ -56,7 +58,7 @@ export const CoffeeContextProvider = ({children}:CoffeeContextProps) =>{
         total:0
     })
 
-    const [infoCheckout, setCheckout] = useState<InfoCheckout>({road:"", city:"", paymentMethod:""})
+    const [infoCheckout, setCheckout] = useState<InfoCheckout>({road:"", city:"", paymentMethod:"", num:""})
 
     const setAddCoffees = (coffee:IselectedCoffees)=>{
         setCoffeesList([...coffeesList, {
@@ -107,9 +109,8 @@ export const CoffeeContextProvider = ({children}:CoffeeContextProps) =>{
 
 
     const setInfoCheckout = (info:InfoCheckout)=>{
-        setInfoCheckout(info)
+        setCheckout(info) 
     }
-
    
     useEffect(()=>{
 

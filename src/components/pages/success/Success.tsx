@@ -2,10 +2,17 @@ import { MapPin, Timer, Money } from "phosphor-react"
 import { SuccessContainer } from "./styles"
 import { ListItem } from "../../intro/styles"
 import Illustration from '../../../assets/Illustration.svg'
+import { useContext } from "react"
+import { CoffeeContext } from "../../../contexts/CoffeeContext"
+
 
 export const Success = ()=>{
+
+    const {infoCheckout} = useContext(CoffeeContext);
+
+
     return(
-        <SuccessContainer className="container">
+        <SuccessContainer className="success container">
             <div className="success-container">
                 <div className="success-title">
                     <h1>Uhu! Pedido confirmado</h1>
@@ -16,23 +23,23 @@ export const Success = ()=>{
                     <ul>
                         <ListItem>
                             <span className="item4"><MapPin size={20} weight="fill"></MapPin></span>
-                            <span>Entrega em Rua da sabedoria, 3139 Lucas do Rio Verde</span>
+                            <span>Entrega em <b>{infoCheckout.road}, {infoCheckout.num}</b> Lucas do Rio Verde</span>
                         </ListItem>
 
                         <ListItem>
                             <span className="item2"><Timer size={20} weight="fill"></Timer></span>
-                            <span>Previsão de entrega <br />20 min - 30 min</span>
+                            <span>Previsão de entrega <br /> <b>20 min - 30 min</b></span>
                         </ListItem>
 
                         <ListItem>
                             <span className="item1"><Money size={20} weight="fill"></Money></span>
-                            <span>Pagamento na entrega <br />Cartão credito</span>
+                            <span>Pagamento na entrega <br /> <b>{infoCheckout.paymentMethod}</b></span>
                         </ListItem>
                     </ul>
                 </div>
             </div>
             
-            <div className="success-image">
+            <div className="success-image text-center">
                 <img src={Illustration} alt="" />
             </div>
 

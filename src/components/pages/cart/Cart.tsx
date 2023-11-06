@@ -16,6 +16,17 @@ export const CartContainer = () => {
     const handleConfirmCheckout = (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
 
+        const road = document.getElementById('road') as HTMLInputElement
+        const city = document.getElementById('city') as HTMLInputElement
+        const num = document.getElementById('num') as HTMLInputElement
+        const paymentMethod = document.getElementsByClassName('paymentMethod') as HTMLCollectionOf<HTMLInputElement>
+
+        setInfoCheckout({
+            road:road.value,
+            city:city.value, 
+            num:num.value,
+            paymentMethod:paymentMethod[0].value
+        })
         
         navigate('/checkout/success')
     }
@@ -42,15 +53,15 @@ export const CartContainer = () => {
                             </div>
 
                             <div className="rua-container">
-                                <input type="text" placeholder="Rua" id="rua" required />
+                                <input type="text" placeholder="Rua" id="road" name="road" required />
                             </div>
 
                             <div className="num-container ">
-                                <input type="number" id="num" placeholder="Número" required />
+                                <input type="number" id="num" placeholder="Número"  required />
                             </div>
 
                             <div className="complemento-container ">
-                                <input type="text" placeholder="Complementar" required />
+                                <input type="text" placeholder="Complementar"  />
                             </div>
 
                             <div className="bairro-container ">
@@ -58,7 +69,7 @@ export const CartContainer = () => {
                             </div>
 
                             <div className="cidade-container ">
-                                <input type="text" placeholder="Cidade" id="cidade" required />
+                                <input type="text" placeholder="Cidade" id="city" name="city" required />
                             </div>
 
                             <div className="uf-container">
@@ -81,18 +92,18 @@ export const CartContainer = () => {
 
                         <div className="payment-options">
                             <div className="credit">
-                                <input type="radio" id="credit" value="crédito" name="paymentMethod" />
+                                <input type="radio" id="credit" className="paymentMethod" value="Cartão de crédito" name="paymentMethod"  />
                                 <label htmlFor="credit"><CreditCard size={20}></CreditCard> CARTÃO DE CRÉDITO</label>
                             </div>
 
                             <div className="debit">
-                                <input type="radio" id="debit" value="débito" name="paymentMethod" />
-                                <label htmlFor="debit"><Bank size={20}></Bank> CARTÃO DE CRÉDITO</label>
+                                <input type="radio" id="debit" className="paymentMethod" value="Cartão de débito" name="paymentMethod" />
+                                <label htmlFor="debit"><Bank size={20}></Bank> CARTÃO DE DÉBITO</label>
                             </div>
 
                             <div className="money">
-                                <input type="radio" id="money" value="dinheiro" name="paymentMethod" />
-                                <label htmlFor="money"><Money size={20}></Money> CARTÃO DE CRÉDITO</label>
+                                <input type="radio" id="money" className="paymentMethod" value="Dinheiro" name="paymentMethod"  />
+                                <label htmlFor="money"><Money size={20}></Money> DINHEIRO</label>
                             </div>
                         </div>
                     </div>

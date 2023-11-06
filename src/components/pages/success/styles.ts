@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 export const SuccessContainer = styled.main`
+
     display: flex;
     justify-content: space-between;
     margin-top: 8rem;
@@ -25,6 +26,11 @@ export const SuccessContainer = styled.main`
             overflow: hidden;
             padding: 2rem;
             border-radius: 5px 20px 5px;
+
+            b{
+                color: ${props=>props.theme['gray-800']};
+            }
+
         }
         padding:.3rem ;
         border-radius: 5px 20px 5px;
@@ -44,5 +50,12 @@ export const SuccessContainer = styled.main`
             font-weight: 500;
             color: ${props=>props.theme['gray-900']};
         }
+    }
+
+
+    @media only screen and (max-width: 992px) {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 `
