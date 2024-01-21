@@ -30,3 +30,4 @@ If you are developing a production application, we recommend updating the config
 # Preview
 
 <img src="/public/preview.gif" alt="">
+<a href="https://coffee-delivery-xi-coral.vercel.app/" target="_blank">Live Demo</a>
