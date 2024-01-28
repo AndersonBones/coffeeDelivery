@@ -126,12 +126,12 @@ export const CartContainer = () => {
                         <ResumeOrder>
                             <div className="resume-container">
                                 <div className="total-items">
-                                    <span>Total de itens</span>
+                                    <span>Valor total dos itens</span>
                                     <span>R$ {String(totalPrice.totalItemsPrice.toFixed(2)).replace('.', ',')}</span>
                                 </div>
 
                                 <div className="frete">
-                                    <span>Entrega</span>
+                                    <span>Valor da entrega</span>
                                     <span>R$ {String(totalPrice.deliveryPrice.toFixed(2)).replace('.', ',')}</span>
                                 </div>
 
